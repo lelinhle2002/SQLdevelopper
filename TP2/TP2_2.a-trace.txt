@@ -1,0 +1,32 @@
+
+IDE NOM                            PRENOM                         GRAD    NBHDISP
+--- ------------------------------ ------------------------------ ---- ----------
+DBJ DU BELLAY                      Joachim                        PRCE           
+
+
+1 ligne inséré.
+
+
+IDE NOM                            PRENOM                         GRAD    NBHDISP
+--- ------------------------------ ------------------------------ ---- ----------
+DBJ DU BELLAY                      Joachim                        PRCE           
+
+
+1 ligne supprimé.
+
+
+IDE NOM                            PRENOM                         GRAD    NBHDISP
+--- ------------------------------ ------------------------------ ---- ----------
+DBJ DU BELLAY                      Joachim                        PRCE           
+EEI EBERHARDT                      Isabelle                       VACA           
+
+
+1 ligne mis à jour.
+
+
+IDE NOM                            PRENOM                         GRAD    NBHDISP
+--- ------------------------------ ------------------------------ ---- ----------
+DBJ DU BELLAY                      Joachim                        PRCE           
+EEI EBERHARDT                      Isabelle                       VACA           
+
+Annulation (rollback) terminée.

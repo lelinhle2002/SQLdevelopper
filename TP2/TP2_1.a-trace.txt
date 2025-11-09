@@ -1,0 +1,72 @@
+
+Erreur commençant à la ligne: 1 de la commande -
+insert into CRENEAU values ('17/07/17', 'mercredi', '17:00', 'CM', '20:00', 'InS2', 'InM2203')
+Rapport d'erreur -
+ORA-20006: un groupe ne peut pas avoir deux enseignements en même temps
+ORA-06512: à "LWK4115A.T_B_I_CRENEAU_CHEV", ligne 9
+ORA-06512: à "LWK4115A.T_B_I_CRENEAU_CHEV", ligne 9
+ORA-04088: erreur lors d'exécution du déclencheur 'LWK4115A.T_B_I_CRENEAU_CHEV'
+
+
+Erreur commençant à la ligne: 3 de la commande -
+insert into AFFECTER (DEBSEMC, JOURC, HEUREDC, GRPC, NSALLE) values ('17/07/17', 'mercredi', '17:00', 'InS2', 'IR028')
+Rapport d'erreur -
+ORA-02291: violation de contrainte d'intégrité (LWK4115A.FK_AFFECTER_DEBSEMC_GRPC) - clé parent introuvable
+
+Annulation (rollback) terminée.
+
+Erreur commençant à la ligne: 7 de la commande -
+insert into CRENEAU values ('17/07/17', 'mercredi', '17:00', 'CM', '18:30', 'InS2', 'InM2203')
+Rapport d'erreur -
+ORA-20006: un groupe ne peut pas avoir deux enseignements en même temps
+ORA-06512: à "LWK4115A.T_B_I_CRENEAU_CHEV", ligne 9
+ORA-06512: à "LWK4115A.T_B_I_CRENEAU_CHEV", ligne 9
+ORA-04088: erreur lors d'exécution du déclencheur 'LWK4115A.T_B_I_CRENEAU_CHEV'
+
+
+Erreur commençant à la ligne: 9 de la commande -
+insert into AFFECTER (DEBSEMC, JOURC, HEUREDC, GRPC, NSALLE) values ('17/07/17', 'mercredi', '17:00', 'InS2', 'IN203')
+Rapport d'erreur -
+ORA-20002:  la capacité de la salle est inférieure à l'effectif du groupe
+ORA-06512: à "LWK4115A.T_B_IU_AFFECTER_CAP", ligne 15
+ORA-04088: erreur lors d'exécution du déclencheur 'LWK4115A.T_B_IU_AFFECTER_CAP'
+
+Annulation (rollback) terminée.
+
+Erreur commençant à la ligne: 13 de la commande -
+insert into CRENEAU values ('17/07/17', 'mercredi', '17:00', 'CM', '18:30', 'InS2', 'InM2203')
+Rapport d'erreur -
+ORA-20006: un groupe ne peut pas avoir deux enseignements en même temps
+ORA-06512: à "LWK4115A.T_B_I_CRENEAU_CHEV", ligne 9
+ORA-06512: à "LWK4115A.T_B_I_CRENEAU_CHEV", ligne 9
+ORA-04088: erreur lors d'exécution du déclencheur 'LWK4115A.T_B_I_CRENEAU_CHEV'
+
+
+Erreur commençant à la ligne: 15 de la commande -
+insert into AFFECTER (DEBSEMC, JOURC, HEUREDC, GRPC, NSALLE) values ('17/07/17', 'mercredi', '17:00', 'InS2', 'IR028')
+Rapport d'erreur -
+ORA-02291: violation de contrainte d'intégrité (LWK4115A.FK_AFFECTER_DEBSEMC_GRPC) - clé parent introuvable
+
+
+Erreur commençant à la ligne: 17 de la commande -
+update AFFECTER
+   set NSALLE = 'InJade'
+where AFFECTER.DEBSEMC  = '24/04/17'
+  and AFFECTER.JOURC    = 'lundi'
+  and AFFECTER.HEUREDC  = '15:30'
+  and AFFECTER.GRPC	    = 'InS2'
+  and AFFECTER.NSALLE     = 'IR028'
+Rapport d'erreur -
+ORA-20002:  la capacité de la salle est inférieure à l'effectif du groupe
+ORA-06512: à "LWK4115A.T_B_IU_AFFECTER_CAP", ligne 15
+ORA-04088: erreur lors d'exécution du déclencheur 'LWK4115A.T_B_IU_AFFECTER_CAP'
+
+
+Erreur commençant à la ligne: 25 de la commande -
+insert into AFFECTER (DEBSEMC, JOURC, HEUREDC, GRPC, NSALLE) values ('17/07/17', 'mercredi', '18:30', 'InS2', 'IR045')
+Rapport d'erreur -
+ORA-01403: aucune donnée trouvée
+ORA-06512: à "LWK4115A.T_B_IU_AFFECTER_CAP", ligne 9
+ORA-04088: erreur lors d'exécution du déclencheur 'LWK4115A.T_B_IU_AFFECTER_CAP'
+
+Annulation (rollback) terminée.

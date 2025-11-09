@@ -1,0 +1,25 @@
+
+Erreur commençant à la ligne: 1 de la commande -
+insert into CRENEAU values ('05/06/17','mardi', '08:05', 'TP', '09:30', 'InS2F2', 'InM2104')
+Rapport d'erreur -
+ORA-20006: Un groupe ne peut pas avoir deux enseignements en même temp
+ORA-06512: à "LWK4115A.T_B_I_CRENEAU_CHEV", ligne 12
+ORA-04088: erreur lors d'exécution du déclencheur 'LWK4115A.T_B_I_CRENEAU_CHEV'
+
+
+Erreur commençant à la ligne: 2 de la commande -
+insert into CRENEAU values ('05/06/17','mardi', '07:45', 'TP', '13:00', 'InS2F2', 'InM2104')
+Rapport d'erreur -
+ORA-20006: Un groupe ne peut pas avoir deux enseignements en même temp
+ORA-06512: à "LWK4115A.T_B_I_CRENEAU_CHEV", ligne 12
+ORA-04088: erreur lors d'exécution du déclencheur 'LWK4115A.T_B_I_CRENEAU_CHEV'
+
+
+Erreur commençant à la ligne: 3 de la commande -
+insert into CRENEAU values ('05/07/17','mardi', '07:45', 'TP', '13:00', 'InS2F2', 'InM2104')
+Rapport d'erreur -
+ORA-20006: Un groupe ne peut pas avoir deux enseignements en même temp
+ORA-06512: à "LWK4115A.T_B_I_CRENEAU_CHEV", ligne 12
+ORA-04088: erreur lors d'exécution du déclencheur 'LWK4115A.T_B_I_CRENEAU_CHEV'
+
+Annulation (rollback) terminée.

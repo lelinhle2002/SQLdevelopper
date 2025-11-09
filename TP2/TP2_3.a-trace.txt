@@ -1,0 +1,50 @@
+
+1 ligne inséré.
+
+
+1 ligne inséré.
+
+
+Erreur commençant à la ligne: 5 de la commande -
+insert into ENSEIGNER values ('17/10/16', 'lundi', '08:00', 'InS1', 'WIS')
+Rapport d'erreur -
+ORA-20009: Le nombre d'heures complémentaires est de98,25 vous êtes limités à  96 heures  complémentaire.
+ORA-06512: à "LWK4115A.T_B_U_ENSEIGNANT", ligne 17
+ORA-04088: erreur lors d'exécution du déclencheur 'LWK4115A.T_B_U_ENSEIGNANT'
+ORA-06512: à "LWK4115A.T_A_DIU_ENSEIGNER", ligne 26
+ORA-04088: erreur lors d'exécution du déclencheur 'LWK4115A.T_A_DIU_ENSEIGNER'
+
+
+1 ligne inséré.
+
+
+Erreur commençant à la ligne: 9 de la commande -
+insert into ENSEIGNER values ('05/06/17', 'mardi', '11:00', 'InS2D1', 'CLS')
+Rapport d'erreur -
+ORA-20010: votre statut ne vous permet pas de faire des heures complémentaires.
+ORA-06512: à "LWK4115A.T_B_U_ENSEIGNANT", ligne 6
+ORA-04088: erreur lors d'exécution du déclencheur 'LWK4115A.T_B_U_ENSEIGNANT'
+ORA-06512: à "LWK4115A.T_A_DIU_ENSEIGNER", ligne 26
+ORA-04088: erreur lors d'exécution du déclencheur 'LWK4115A.T_A_DIU_ENSEIGNER'
+
+
+Erreur commençant à la ligne: 11 de la commande -
+insert into ENSEIGNER values ('17/10/16', 'lundi', '08:00', 'InS1', 'CLS')
+Rapport d'erreur -
+ORA-20010: votre statut ne vous permet pas de faire des heures complémentaires.
+ORA-06512: à "LWK4115A.T_B_U_ENSEIGNANT", ligne 6
+ORA-04088: erreur lors d'exécution du déclencheur 'LWK4115A.T_B_U_ENSEIGNANT'
+ORA-06512: à "LWK4115A.T_A_DIU_ENSEIGNER", ligne 26
+ORA-04088: erreur lors d'exécution du déclencheur 'LWK4115A.T_A_DIU_ENSEIGNER'
+
+
+Erreur commençant à la ligne: 13 de la commande -
+insert into ENSEIGNER values ('17/10/16', 'mardi', '14:00', 'InS1F', 'RNJ')
+Rapport d'erreur -
+ORA-20010: votre statut ne vous permet pas de faire des heures complémentaires.
+ORA-06512: à "LWK4115A.T_B_U_ENSEIGNANT", ligne 6
+ORA-04088: erreur lors d'exécution du déclencheur 'LWK4115A.T_B_U_ENSEIGNANT'
+ORA-06512: à "LWK4115A.T_A_DIU_ENSEIGNER", ligne 26
+ORA-04088: erreur lors d'exécution du déclencheur 'LWK4115A.T_A_DIU_ENSEIGNER'
+
+Annulation (rollback) terminée.
