@@ -1,0 +1,269 @@
+Test 1 :
+P_DEBSEMC = NULL
+P_JOURC  = NULL
+P_HEUREDC  = NULL
+P_GRPC  = NULL
+P_TYPEC  = NULL
+P_HEUREFC = NULL
+P_NOME  = NULL
+P_PRENOME  = NULL
+P_IDENS  = NULL
+P_MATC  = NULL
+
+begin
+*
+ERROR at line 1:
+ORA-20107: Les parametres P_DEBSEMC, P_JOURC, P_HEUREDC, P_GRPC, P_TYPEC, P_HEUREFC et 
+P_MATC doivent etre renseignes
+ORA-06512: at "LWK4115A.INS_CRENEAU", line 19
+ORA-06512: at line 13
+
+https://docs.oracle.com/error-help/db/ora-20107/
+
+
+More Details :
+https://docs.oracle.com/error-help/db/ora-20107/
+https://docs.oracle.com/error-help/db/ora-06512/
+Test 2 :
+P_DEBSEMC = '17/06/16'
+P_JOURC  = 'mercredi'
+P_HEUREDC  = '08:00'
+P_GRPC  = 'InS1A'
+P_TYPEC  = 'TD'
+P_HEUREFC = '09:30'
+P_NOME  = 'CLAUDEL'
+P_PRENOME  = NULL
+P_IDENS  = NULL
+P_MATC  = 'inA1105'
+
+begin
+*
+ERROR at line 1:
+ORA-20111: L'heure de debut doit etre anterieure a l'heure de fin.
+ORA-06512: at "LWK4115A.INS_CRENEAU", line 59
+ORA-06512: at line 13
+
+https://docs.oracle.com/error-help/db/ora-20111/
+
+
+More Details :
+https://docs.oracle.com/error-help/db/ora-20111/
+https://docs.oracle.com/error-help/db/ora-06512/
+no rows selected
+no rows selected
+no rows selected
+Test 3 :
+P_DEBSEMC = '17/06/16'
+P_JOURC  = 'mercredi'
+P_HEUREDC  = '08:00'
+P_GRPC  = 'InS1A'
+P_TYPEC  = 'TD'
+P_HEUREFC = '09:30'
+P_NOME  = 'CLAUDEL'
+P_PRENOME  = NULL
+P_IDENS  = NULL
+P_MATC  = 'inA1105'
+
+begin
+*
+ERROR at line 1:
+ORA-20111: L'heure de debut doit etre anterieure a l'heure de fin.
+ORA-06512: at "LWK4115A.INS_CRENEAU", line 59
+ORA-06512: at line 13
+
+https://docs.oracle.com/error-help/db/ora-20111/
+
+
+More Details :
+https://docs.oracle.com/error-help/db/ora-20111/
+https://docs.oracle.com/error-help/db/ora-06512/
+Test 4 :
+P_DEBSEMC = '17/06/22'
+P_JOURC  = 'mercredi'
+P_HEUREDC  = '08:00'
+P_GRPC  = 'InS1A'
+P_TYPEC  = 'TD'
+P_HEUREFC = '09:30'
+P_NOME  = NULL
+P_PRENOME  = NULL
+P_IDENS  = 'ZZZ'
+P_MATC  = 'inA1105'
+
+begin
+*
+ERROR at line 1:
+ORA-20111: L'heure de debut doit etre anterieure a l'heure de fin.
+ORA-06512: at "LWK4115A.INS_CRENEAU", line 59
+ORA-06512: at line 13
+
+https://docs.oracle.com/error-help/db/ora-20111/
+
+
+More Details :
+https://docs.oracle.com/error-help/db/ora-20111/
+https://docs.oracle.com/error-help/db/ora-06512/
+Test 5 :
+P_DEBSEMC = '17/06/22'
+P_JOURC  = 'mercredi'
+P_HEUREDC  = '08:00'
+P_GRPC  = 'InS1A'
+P_TYPEC  = 'TD'
+P_HEUREFC = '09:30'
+P_NOME  = 'CLAUDEL'
+P_PRENOME  = NULL
+P_IDENS  = NULL
+P_MATC  = 'inA110Z'
+
+begin
+*
+ERROR at line 1:
+ORA-02291: integrity constraint (LWK4115A.FK_CRENEAU_MATC) violated - parent key not found
+ORA-06512: at "LWK4115A.INS_CRENEAU", line 47
+ORA-06512: at line 13
+
+https://docs.oracle.com/error-help/db/ora-02291/
+
+
+More Details :
+https://docs.oracle.com/error-help/db/ora-02291/
+https://docs.oracle.com/error-help/db/ora-06512/
+Test 6 :
+P_DEBSEMC = '17/06/22'
+P_JOURC  = 'mercredi'
+P_HEUREDC  = '11:00'
+P_GRPC  = 'InS1A'
+P_TYPEC  = 'TD'
+P_HEUREFC = '09:30'
+P_NOME  = 'CLAUDEL'
+P_PRENOME  = NULL
+P_IDENS  = NULL
+P_MATC  = 'inA1105'
+
+begin
+*
+ERROR at line 1:
+ORA-02290: check constraint (LWK4115A.CHK_CRENEAU_HEUREDC) violated
+ORA-06512: at "LWK4115A.INS_CRENEAU", line 47
+ORA-06512: at line 13
+
+https://docs.oracle.com/error-help/db/ora-02290/
+
+
+More Details :
+https://docs.oracle.com/error-help/db/ora-02290/
+https://docs.oracle.com/error-help/db/ora-06512/
+Test 7 :
+P_DEBSEMC = '17/06/22'
+P_JOURC  = 'mercredi'
+P_HEUREDC  = '08:00'
+P_GRPC  = 'InS1A'
+P_TYPEC  = 'TD'
+P_HEUREFC = '09:30'
+P_NOME  = 'CLAUDELD'
+P_PRENOME  = NULL
+P_IDENS  = NULL
+P_MATC  = 'inA1105'
+
+begin
+*
+ERROR at line 1:
+ORA-20111: L'heure de debut doit etre anterieure a l'heure de fin.
+ORA-06512: at "LWK4115A.INS_CRENEAU", line 59
+ORA-06512: at line 13
+
+https://docs.oracle.com/error-help/db/ora-20111/
+
+
+More Details :
+https://docs.oracle.com/error-help/db/ora-20111/
+https://docs.oracle.com/error-help/db/ora-06512/
+Test 8 :
+P_DEBSEMC = '17/06/22'
+P_JOURC  = 'mercredi'
+P_HEUREDC  = '08:00'
+P_GRPC  = 'InS1A'
+P_TYPEC  = 'TD'
+P_HEUREFC = '09:30'
+P_NOME  = 'CLAUDEL'
+P_PRENOME  = NULL
+P_IDENS  = 'CAA'
+P_MATC  = 'inA1105'
+
+begin
+*
+ERROR at line 1:
+ORA-20108: P_IDENS ou P_NOME doit etre renseigne, mais pas les deux.
+ORA-06512: at "LWK4115A.INS_CRENEAU", line 25
+ORA-06512: at line 13
+
+https://docs.oracle.com/error-help/db/ora-20108/
+
+
+More Details :
+https://docs.oracle.com/error-help/db/ora-20108/
+https://docs.oracle.com/error-help/db/ora-06512/
+Test 9 :
+P_DEBSEMC = '17/06/22'
+P_JOURC  = 'mercredi'
+P_HEUREDC  = '08:00'
+P_GRPC  = 'InS1A'
+P_TYPEC  = 'TD'
+P_HEUREFC = '09:30'
+P_NOME  = NULL
+P_PRENOME  = 'Paul'
+P_IDENS  = 'CAA'
+P_MATC  = 'inA1105'
+
+begin
+*
+ERROR at line 1:
+ORA-20111: L'heure de debut doit etre anterieure a l'heure de fin.
+ORA-06512: at "LWK4115A.INS_CRENEAU", line 59
+ORA-06512: at line 13
+
+https://docs.oracle.com/error-help/db/ora-20111/
+
+
+More Details :
+https://docs.oracle.com/error-help/db/ora-20111/
+https://docs.oracle.com/error-help/db/ora-06512/
+
+0 rows deleted.
+
+
+0 rows deleted.
+
+
+0 rows deleted.
+
+
+Commit complete.
+
+Test 10 :
+P_DEBSEMC = '05/12/16'
+P_JOURC  = 'mardi'
+P_HEUREDC  = '09:30'
+P_GRPC  = 'InS1A'
+P_TYPEC  = 'TP'
+P_HEUREFC = '11:00'
+P_NOME  = 'CLAUDEL'
+P_PRENOME  = NULL
+P_IDENS  = NULL
+P_MATC  = 'inA1105'
+
+begin
+*
+ERROR at line 1:
+ORA-20006: un groupe ne peut pas avoir deux enseignements en même temp
+ORA-06512: at "LWK4115A.T_B_I_CRENEAU_CHEV", line 12
+ORA-04088: error during execution of trigger 'LWK4115A.T_B_I_CRENEAU_CHEV'
+ORA-06512: at "LWK4115A.INS_CRENEAU", line 47
+ORA-06512: at line 13
+
+https://docs.oracle.com/error-help/db/ora-20006/
+
+
+More Details :
+https://docs.oracle.com/error-help/db/ora-20006/
+https://docs.oracle.com/error-help/db/ora-06512/
+https://docs.oracle.com/error-help/db/ora-04088/
