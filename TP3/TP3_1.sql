@@ -37,6 +37,10 @@ P_MATC doivent etre renseignes');
         v_idens := P_IDENS;
     END IF;
     
+    IF (v_idens IS NULL)
+    THEN
+        RAISE_APPLICATION_ERROR(-20108, 'L''identifiant de l''enseignant n''existe pas. ');
+    END IF;
 
     v_salle_disp := GET_SALLE_DISP(P_DEBSEMC,P_JOURC, P_HEUREDC, P_GRPC,P_TYPEC);
     IF v_salle_disp IS NULL
@@ -53,17 +57,9 @@ P_MATC doivent etre renseignes');
     BEGIN
     INSERT INTO CRENEAU VALUES
         (P_DEBSEMC, P_JOURC, P_HEUREDC,  P_TYPEC , P_HEUREFC, P_GRPC, P_MATC);
-    --SELECT HEUREDC, HEUREFC
-    --INTO v_heuredc, v_heurefc
-    --FROM CRENEAU C
-    --WHERE C.DEBSEMC = P_DEBSEMC
-    --AND C.JOURC = P_JOURC
-    --AND C.TYPEC = P_TYPEC
-    --AND C.GRPC  = P_GRPC
-    --AND C.MATC = P_MATC;
     EXCEPTION
         WHEN NO_DATA_FOUND THEN
-            dbms_output.put_line('pas demployéavec un identifiant ');
+            dbms_output.put_line('L''identifiant de la matiere n''existe pas');
     END;
 
     DECLARE 
@@ -73,8 +69,8 @@ P_MATC doivent etre renseignes');
         INSERT INTO AFFECTER VALUES
         (P_DEBSEMC, P_JOURC, P_HEUREDC,  P_GRPC, v_salle_disp);
     EXCEPTION
-        WHEN DUP_VAL_ON_INDEX THEN
-            RAISE_APPLICATION_ERROR(-20108, 'L’enseignant est déjà affecté à ce créneau.');
+        WHEN NO_DATA_FOUND THEN
+            RAISE_APPLICATION_ERROR(-20108, ' L''identifiant de la matiere n''existe pas');
     END;
 EXCEPTION
     WHEN NO_DATA_FOUND THEN
