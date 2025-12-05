@@ -1,0 +1,6 @@
+exec VALIDERHEURES('PGM',5);
+call VALIDERHEURES('PGM',5);
+
+exec VALIDERHEURES('PGM',-5);
+exec VALIDERHEURES('PGM', null);
+
