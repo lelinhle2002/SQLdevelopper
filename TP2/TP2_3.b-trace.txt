@@ -1,0 +1,23 @@
+
+1 ligne inséré.
+
+
+1 ligne inséré.
+
+
+1 ligne inséré.
+
+
+1 ligne inséré.
+
+
+1 ligne inséré.
+
+
+IDE NOM                            PRENOM                         GRAD    NBHDISP MOTIF                                                                                                                                                                                                   
+--- ------------------------------ ------------------------------ ---- ---------- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+WIS WEIL                           Simone                         PROF     290,25 Le nombre d'heures complémentaires est de 98,25, vous êtes limité à 96 heures complémentaires.                                                                                                          
+CLS COLETTE                        Sidonie-Gabrielle              VACA      276,5 Votre statut ne vous permet pas de faire des heures complémentaires.                                                                                                                                    
+CLS COLETTE                        Sidonie-Gabrielle              VACA      276,5 Le nombre d'heures complémentaires est de 92,5, vous êtes limité à 92 heures complémentaires.                                                                                                           
+
+Annulation (rollback) terminée.

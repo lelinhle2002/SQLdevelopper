@@ -1,0 +1,47 @@
+
+DEBSEMC  JOURC    HEURE TYPEC                HEURE GRPC                 MATC      
+-------- -------- ----- -------------------- ----- -------------------- ----------
+13/03/17 mercredi 14:00 projet tutoré        16:00 Insil GTID                     
+
+
+IDE NOM                            PRENOM                         GRAD    NBHDISP
+--- ------------------------------ ------------------------------ ---- ----------
+BUC BAUDELAIRE                     Charles                        VACA           
+CAP CLAUDEL                        Paul                           MCF            
+CMA CAMUS                          Albert                         MCF            
+FYG FEYDEAU                        Georges                        PRCE           
+
+
+1 ligne mis à jour.
+
+
+IDE NOM                            PRENOM                         GRAD    NBHDISP
+--- ------------------------------ ------------------------------ ---- ----------
+BUC BAUDELAIRE                     Charles                        VACA          0
+CAP CLAUDEL                        Paul                           MCF           0
+CMA CAMUS                          Albert                         MCF           0
+FYG FEYDEAU                        Georges                        PRCE          0
+
+
+1 ligne mis à jour.
+
+
+IDE NOM                            PRENOM                         GRAD    NBHDISP
+--- ------------------------------ ------------------------------ ---- ----------
+BUC BAUDELAIRE                     Charles                        VACA          2
+CAP CLAUDEL                        Paul                           MCF           2
+CMA CAMUS                          Albert                         MCF           2
+FYG FEYDEAU                        Georges                        PRCE          2
+
+
+1 ligne mis à jour.
+
+
+IDE NOM                            PRENOM                         GRAD    NBHDISP
+--- ------------------------------ ------------------------------ ---- ----------
+BUC BAUDELAIRE                     Charles                        VACA          2
+CAP CLAUDEL                        Paul                           MCF           2
+CMA CAMUS                          Albert                         MCF           2
+FYG FEYDEAU                        Georges                        PRCE          2
+
+Annulation (rollback) terminée.
