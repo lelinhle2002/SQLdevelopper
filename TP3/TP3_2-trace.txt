@@ -1,0 +1,96 @@
+Test 1 :
+P_DEBSEMC = NULL
+P_JOURC  = NULL
+P_HEUREDC  = NULL
+P_GRPC  = NULL
+P_TYPEC  = NULL
+
+declare 
+*
+ERROR at line 1:
+ORA-20104: Tous les parametres doivent etre renseignes.
+ORA-06512: at "LWK4115A.CELCAT", line 38
+ORA-06512: at line 11
+
+https://docs.oracle.com/error-help/db/ora-20104/
+
+
+More Details :
+https://docs.oracle.com/error-help/db/ora-20104/
+https://docs.oracle.com/error-help/db/ora-06512/
+Test 2 :
+P_DEBSEMC = '05/12/16'
+P_JOURC  = 'mardi'
+P_HEUREDC  = '09:30'
+P_GRPC  = 'InS1A'
+P_TYPEC  = 'CM'
+v_Return = GR019, IN021, IN115, IN116, IN203, IN204, IN205, IN208, IN212, IR028, IR033, IRExam, 
+
+Test 3 :
+P_DEBSEMC = '05/12/16'
+P_JOURC  = 'mardi'
+P_HEUREDC  = '09:30'
+P_GRPC  = 'InS1A'
+P_TYPEC  = 'TP'
+v_Return = 
+
+Test 4 :
+P_DEBSEMC = '05/12/16'
+P_JOURC  = 'MARDI'
+P_HEUREDC  = '09:30'
+P_GRPC  = 'inS1a'
+P_TYPEC  = 'TD'
+v_Return = GR019, IN021, IN022, IN115, IN116, IN118, IN201, IN203, IN204, IN205, IN208, IN209, IN210, IN212, IR028, IR033, IRExam, InAmbre, InDiamant, InGrenat, InOpale, InPerle, InRubis, InTopaze, InTurquoise, 
+
+Test 5 :
+P_DEBSEMC = '05/12/16'
+P_JOURC  = 'mardi'
+P_HEUREDC  = '09:30'
+P_GRPC  = 'InS1'
+P_TYPEC  = 'CM'
+v_Return = IR028, IR033, IRExam, 
+
+
+
+PL/SQL procedure successfully completed.
+
+Test 6 :
+P_DEBSEMC = '05/12/16'
+P_JOURC  = 'mardi'
+P_HEUREDC  = '09:30'
+P_GRPC  = 'InS1Z'
+P_TYPEC  = 'TD'
+
+declare 
+*
+ERROR at line 1:
+ORA-20105: Le groupe InS1Z n'existe pas.
+ORA-06512: at "LWK4115A.CELCAT", line 69
+ORA-06512: at line 11
+
+https://docs.oracle.com/error-help/db/ora-20105/
+
+
+More Details :
+https://docs.oracle.com/error-help/db/ora-20105/
+https://docs.oracle.com/error-help/db/ora-06512/
+Test 7 :
+P_DEBSEMC = '05/12/16'
+P_JOURC  = 'mardi'
+P_HEUREDC  = '09M30'
+P_GRPC  = 'InS1'
+P_TYPEC  = 'TD'
+
+declare 
+*
+ERROR at line 1:
+ORA-20102: Le format de l'heure de debut ou de fin doit etre HH:MM
+ORA-06512: at "LWK4115A.CELCAT", line 72
+ORA-06512: at line 11
+
+https://docs.oracle.com/error-help/db/ora-20102/
+
+
+More Details :
+https://docs.oracle.com/error-help/db/ora-20102/
+https://docs.oracle.com/error-help/db/ora-06512/
